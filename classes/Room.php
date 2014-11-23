@@ -44,7 +44,7 @@ class Room {
 
     public function delet($id = null) {
         if ($id) {
-            $delet = $this->_db->delet('room', array('id', '=', $id));
+            $this->_db->delet('room', array('id', '=', $id));
         }
         return FALSE;
     }

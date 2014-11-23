@@ -8,6 +8,9 @@ $GLOBALS['config'] = array(
         'dbname'     => 'HotelReservation',
         'dbuser'     => 'root',
         'dbpassword' => 'rrrr'
+    ),
+    'session' => array(
+        'token_name' => 'token'
     )
 );
 
@@ -15,3 +18,5 @@ $GLOBALS['config'] = array(
 spl_autoload_register(function ($class) {
     include 'classes/' . $class . '.php';
 });
+
+//payment cionfig

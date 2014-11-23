@@ -133,5 +133,8 @@ public function error(){
     public function count(){
         return $this->_count;
     }
+    public function lastinsert(){
+        return $this->_pdo->lastInsertId();
+    }
 
 }
