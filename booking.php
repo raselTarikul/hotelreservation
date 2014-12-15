@@ -1,6 +1,5 @@
 <?php
 require_once './core/init.php';
-require __DIR__.'/payment/vedor/autoload.php';
 // Order processing code will go here
 
 if (Input::exists('post')) {
@@ -65,13 +64,14 @@ if (Input::exists('post')) {
             'paidamount' => $amount,
             'dueamount' => 0,
         ));
+       Session::put('order_id', $orderid);
+       $payment = new Pay();
+       $payment->pay($amount, "Payment for reservation");
+       
     } catch (Exception $e) {
         echo 'Unable to place order at this moment';
     }
-    //Payment Order
 
-    echo $orderid;
-    exit();
 }
 if (Input::exists('get') /* && Token::check(Input::get('token')) */) {
     ?>

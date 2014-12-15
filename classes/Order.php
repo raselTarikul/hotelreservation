@@ -23,5 +23,13 @@ class Order {
             return $this->_db->lastinsert();
         }
     }
+    
+    public  function conferm($id){
+        $this->_db->update('booking', $id, array('status'=>1));
+    }
+    
+    public function remove($id){
+        $this->_db->delet('booking', $id);
+    }
 
 }

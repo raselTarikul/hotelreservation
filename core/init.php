@@ -10,7 +10,14 @@ $GLOBALS['config'] = array(
         'dbpassword' => 'rrrr'
     ),
     'session' => array(
-        'token_name' => 'token'
+        'token_name' => 'token',
+        'paypal_token' => 'paypal'
+    ),
+    'paypal' => array(
+        'clientid' =>'AYp5tBCZVUIyv3h3i2lFMYe4PobbkQJX9SMAHGMILRTLJN-mWwWyCPjgAkM-',
+        'secrectid' => 'EKO8ahAM_ccS3-gx7sJmLIjyisTfTzCVdJxyqdLcG3_vqgAYFEHDQmFihT3c',
+        'redirecturl' => 'http://localhost/hotelreservation/payment.php?approved=true',
+        'cancelurl' => 'http://localhost/hotelreservation/payment.php?approved=false'
     )
 );
 
